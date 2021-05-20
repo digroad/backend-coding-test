@@ -1,0 +1,56 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Backend coding test
+  description: An API server that connect to the Github API, and list all public repositories from an user.
+servers:
+  - url: http://localhost:5000
+paths:
+  /{userId}/repositories:
+    get:
+      summary: Returns all public repositories of the user specified
+      description: Returns all public repositories of the user specified.
+      operationId: getRepositories
+      parameters:
+        - name: userId
+          in: path
+          description: user id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: repositories response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Repository'
+components:
+  schemas:
+    Repository:
+      type: object
+      required:
+        - id
+        - name
+        - description
+        - stargazersCount
+        - ownerId
+        - ownerLogin
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        stargazersCount:
+          type: integer
+          format: int64
+        ownerId:
+          type: integer
+          format: int64
+        ownerLogin:
+          type: string
