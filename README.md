@@ -6,7 +6,7 @@ Implement an API server that lists all public GitHub repositories of the user sp
 
 ## Prerequisite
 
-- Use `Go` as the programming language. Feel free to use any libraries you need.
+- Use [Go](https://golang.org/). Feel free to use any libraries you need.
 - Write unit tests you may find helpful or important to have.
 - Please spend at least 90 minutes on this test. Feel free to take more time if you wish.
 
@@ -20,7 +20,7 @@ Feel free to choose if you are going to use the REST API or the GraphQL API.
 ### 2. Implement GetRepositories API
 
 Implement `GetRepositories` API. It should take `userId` parameter, and returns repositories of the user specified.
-We have prepared the schema of OpenAPI version 3 ( `api.yaml` ), so implement it according to the schema.
+We have prepared the schema of OpenAPI version 3 ( [api.yaml](https://github.com/digroad/backend-coding-test/blob/master/api.yaml) ), so implement it according to the schema.
 
 ## Bonus Tasks
 
